@@ -4,6 +4,7 @@
 body {
   font-family: $font;
   font-weight: 400;
+  background-color: #1F2023;
 }
 
 a {
@@ -59,6 +60,9 @@ a {
     }
     &:before {
       content: "";
+      display: block;
+      background-repeat: no-repeat;
+      //background-size: contain;
       position: absolute;
       width: 28px;
       height: 24px;
@@ -93,7 +97,91 @@ a {
       top: 71px;
       right: 0;
       background-image: url("../images/header-bottom-right.svg");
+      display: block;
+      background-repeat: no-repeat;
+      //background-size: contain;
     }
+  }
+}
+
+.conatiner {
+  font-family: $font;
+  width: 100%;
+  max-width: 1830px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.banner {
+  margin: 40px 45px 150px 45px;
+  border-radius: 50px;
+  display: flex;
+  min-height: 861px;
+  background: url("../images/bg-banner.jpg") center center/cover no-repeat;
+  padding: 100px 50px 100px 50px;
+  &__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 110%;
+    color: $light;
+    max-width: 1031px;
+    height: 140px;
+    margin: 0;
+  }
+  &__box {
+    margin-top: 20px;
+  }
+  &__btn {
+    margin-top: 135px;
+    font-family: $font;
+    width: 1031px;
+    height: 130px;
+    background: $accent;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $light;
+  }
+  }
+
+.banner-box {
+  width: 970px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 30px;
+  border: 1px solid $light;
+  border-radius: 20px;
+  position: relative;
+  &_title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $light;
+
+  }
+  &_text {
+    margin: 0;
+    width: 669px;
+    height: 120px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    color: $light;
+    max-width: 669px;
+  }
+  &_img {
+    position: absolute;
+    top: -72px;
+    right: -20px;
   }
 }
 
