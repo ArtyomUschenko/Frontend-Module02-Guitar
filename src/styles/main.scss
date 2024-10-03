@@ -18,27 +18,29 @@ a {
   position: relative;
   &:before {
     content: "";
-    //width: 90%; //
+    width: 90%; //
     left: 10px; //
-    height: 27px;
+    height: 27.5px;
     display: block;
     position: absolute;
     top: 0;
     //left: 0;
     z-index: -1;
     background-color: $accent;
+
   }
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    bottom: -24px;
-    position: absolute;
-    top: 71px;
-    background-image: url("../images/header-bottom.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+
+  //&:after {
+  //  content: "";
+  //  display: block;
+  //  width: 100%;
+  //  bottom: -24px;
+  //  position: absolute;
+  //  top: 71px;
+  //  background-image: url("../images/header-bottom.svg");
+  //  background-repeat: no-repeat;
+  //  background-size: contain;
+  //}
   &__logo {
     border-radius: 10px 0 0 0;
     padding: 20px 45px 0 45px;
@@ -54,6 +56,15 @@ a {
       position: absolute;
       right: -76px;
       top: 0;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 24px;
+      top: 71px;
+      left: 0;
+      background-image: url("../images/header-bottom-left.svg");
     }
 
   }
@@ -73,6 +84,15 @@ a {
       background-image: url("../images/header-right.svg");
       left: -76px;
       top: 0;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 28px;
+      height: 24px;
+      top: 71px;
+      right: 0;
+      background-image: url("../images/header-bottom-right.svg");
     }
   }
 }
