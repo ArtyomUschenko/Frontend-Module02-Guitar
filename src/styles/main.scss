@@ -21,6 +21,7 @@ a {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 1;
   &:before {
     content: "";
     width: 90%; //
@@ -130,6 +131,9 @@ a {
     position: relative;
     height: 151px;
     margin-right: 80px;
+    padding-bottom: 30px; //
+    padding-left: 30px; //
+    box-sizing: border-box; //
     &:after {
       content: "";
       background-image: url("../images/banner-info-decor.svg");
@@ -140,21 +144,35 @@ a {
       height: 151px;
       right: -80px;
       position: absolute;
-      top: 0;
+      top: -1px;
     }
   }
-  &__img {
-    padding: 9px;
-    position: absolute;
-    right: -80px;
-    border: 1px solid #FFFFFF;
-    border-radius: 10px;
-  }
+  &__text {
+    font-weight: 200; //
+    font-size: 24px;//
+    margin: 0; //
+    line-height: 110%; //
+    span {
+      display: block; //
+      margin-top: 20px;
+      font-weight: 700; //
+      font-size: 32px; //
+    }
+    }
 
   &__decor {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -80px;
+    border: 1px solid $light;
+    border-radius: 10px;
+    box-sizing: border-box;
+
   }
   &__title {
     font-weight: 700;
