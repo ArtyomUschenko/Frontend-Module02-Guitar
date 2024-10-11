@@ -297,12 +297,38 @@ a {
 }
 
 .tag {
+  width: 150%; //
   display: flex;
   gap: 64px;
   animation: move-left 20s infinite linear alternate;
   overflow: hidden;
   &:hover {
     animation-play-state: paused;
+  }
+  &__text {
+    box-sizing: border-box;
+    border: 1px solid $grey;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 110%;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: $accent;
+      border-radius: 50%;
+      position: absolute;
+      left: -41px;
+      top: 15px;
+    }
+    &:hover {
+      border: 0;
+      cursor: pointer;
+    }
   }
 }
 
