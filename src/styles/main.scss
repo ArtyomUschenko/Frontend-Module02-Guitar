@@ -469,5 +469,40 @@ a {
   }
 }
 
-/* 01 */
+.accordion {
+  &__btn {
+    &:after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      background: url("../images/ui/remove.svg") center center/cover no-repeat;
+    }
+    &.active {
+      &:after {
+        background: url("../images/ui/plus.svg") center center/cover no-repeat;
+      }
+    }
+  }
+
+  &__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition:  max-height 0.2s ease-out;
+  }
+
+
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &:before {
+      content: '—';
+    }
+  }
+}
 
