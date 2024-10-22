@@ -570,7 +570,6 @@ a {
 
 .result {
   margin-top: 150px;
-  margin-bottom: 150px;
   &__list {
     margin-top: 50px;
     display: grid;
@@ -641,6 +640,8 @@ a {
 }
 
 .areas {
+  margin-top: 150px;
+  margin-bottom: 150px;
   &__link {
     display: flex;
     justify-content: space-between;
@@ -652,19 +653,19 @@ a {
     border-radius: 0;
     transition: $tr;
     position: relative;
-    & + & {
-      margin-top: 30px;
+    margin-bottom: 30px;
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
     }
     &:before {
       content: "";
       display: block;
       position: absolute;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
       opacity: 0;
       transition: $tr;
       transform: scale(0);
+      left: 769px;
     }
     &:hover {
       border-radius: 10px;
@@ -706,18 +707,18 @@ a {
     &._violin {
       &:before {
         width: 568px;
-        height: 599px;
+        height: 528px;
         background: url("../images/areas/03.png") center center/cover no-repeat;
-        top:calc(50% - 300px);
+        top:calc(50% - 264px);
       }
     }
 
     &._bas-guitar {
       &:before {
         width: 568px;
-        height: 439px;
+        height: 394px;
         background: url("../images/areas/04.png") center center/cover no-repeat;
-        top:calc(50% - 220px);
+        top:calc(50% - 197px);
       }
     }
   }
