@@ -584,14 +584,17 @@ a {
       display: grid;
       grid-column: 2 / 5;
       grid-template-columns: subgrid;
-
+      grid-template-rows: 130px;
+      align-items: center;
     }
   }
   &__number {
-    display: block;
+    width: fit-content;
+    padding: 10px;
+    //display: block;
     //padding: 10px;
-    width: 62px;
-    height: 46px;
+    //width: 62px;
+    //height: 46px;
     background: $accent;
     border-radius: 10px;
     font-weight: 600;
@@ -599,10 +602,13 @@ a {
     //line-height: 110%;
     color: $light;
     text-align: center;
-    line-height: 45px;
-    margin-bottom: 30px;
+    line-height: 110%;
+    //margin-bottom: 30px;
   }
   &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     margin: 0;
     letter-spacing: -0.005em;
     font-weight: 400;
@@ -612,7 +618,7 @@ a {
   }
   &__btn {
     box-sizing: border-box;
-    grid-column: 2 / 5;
+    grid-column: 2 / 4;
     color: $light;
     font-size: 20px;
     font-weight: 600;
@@ -623,6 +629,13 @@ a {
     border: 1px solid $accent;
     padding: 30px;
     cursor: pointer;
+    align-self: stretch;
+    @media(hover: hover) {
+      &:hover {
+        color: $accent;
+        background-color: transparent;
+      }
+    }
   }
 }
 
