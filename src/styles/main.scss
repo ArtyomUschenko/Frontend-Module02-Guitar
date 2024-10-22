@@ -569,6 +569,7 @@ a {
 
 .result {
   margin-top: 150px;
+  margin-bottom: 150px;
   &__list {
     margin-top: 50px;
     display: grid;
@@ -579,6 +580,12 @@ a {
     background: $light;
     border-radius: $br-min;
     padding: 30px;
+    &._subgrid {
+      display: grid;
+      grid-column: 2 / 5;
+      grid-template-columns: subgrid;
+
+    }
   }
   &__number {
     display: block;
@@ -604,30 +611,18 @@ a {
     color: $dark;
   }
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    width: 860px;
-    height: 130px;
-    background: $accent;
-    border: none;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 110%;
+    box-sizing: border-box;
+    grid-column: 2 / 5;
     color: $light;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    background-color: $accent;
+    border-radius: $br-min;
+    border: 1px solid $accent;
+    padding: 30px;
+    cursor: pointer;
   }
 }
 
-//.grid_1 {grid-row: 4 / 4;}
-
-.grid_3 {
-  display: flex;
-  grid-column: span 3;
-  justify-content: space-between;
-  gap:30px;
-
-
-}
