@@ -680,3 +680,50 @@ a {
     }
   }
 }
+
+.footer {
+  margin-bottom: 165px;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $dark;
+  border-radius: 20px;
+  &__logo {
+    margin-bottom: 30px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $light;
+  }
+  &__btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    text-decoration-line: underline;
+    color: $accent;
+  }
+  &__sign {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $light;
+  }
+  &__social {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    background-color: $light;
+    border-radius: 20%;
+  }
+}
