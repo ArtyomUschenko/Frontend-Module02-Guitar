@@ -626,3 +626,57 @@ a {
   }
 }
 
+.direction {
+  margin-bottom: 150px;
+  &__list {
+    margin-top: 50px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    box-sizing: border-box;
+    padding: 30px;
+    width: 100%;
+    //height: 108px;
+    position: relative;
+    border-bottom: 1px solid $accent;
+    &:hover {
+      background: $accent;
+      border-bottom: 1px solid $accent;
+      border-radius: 10px;
+      cursor: pointer;
+      .direction__img {
+        opacity: 1;
+      }
+    }
+    &:after {
+      content: "";
+      display: block;
+      background: url("../images/ui/arrowup.svg") center center/cover no-repeat;
+      position: absolute;
+      height: 48px;
+      width: 48px;
+      top: 30px;
+      right: 30px;
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: $light;
+  }
+  &__img {
+    position: absolute;
+    left: 769px;
+    top: 50%;
+    transform: translateY(-60%);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    ._sk {
+      top: -100px;
+    }
+  }
+}
