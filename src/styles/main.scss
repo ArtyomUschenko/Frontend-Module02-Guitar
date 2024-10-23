@@ -14,7 +14,6 @@ body {
 a {
   text-decoration: none;
 }
-
 .title-h2 {
   font-weight: 700;
   font-size: 32px;
@@ -106,6 +105,21 @@ a {
       display: block;
       background-repeat: no-repeat;
       //background-size: contain;
+    }
+  }
+}
+
+.logo {
+  &._max {
+    svg {
+      width: 400px;
+      height: 31px;
+    }
+  }
+  &._min {
+    svg {
+      width: 296px;
+      height: 22px;
     }
   }
 }
@@ -782,49 +796,103 @@ a {
 //  }
 //}
 
-.footer {
-  margin-bottom: 165px;
-  padding: 30px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: $dark;
-  border-radius: 20px;
-  &__logo {
-    margin-bottom: 30px;
-  }
-  &__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: $light;
-  }
-  &__btn {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
-    text-decoration-line: underline;
-    color: $accent;
-  }
-  &__sign {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: $light;
-  }
-  &__social {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 8px;
-    justify-content: flex-end;
-  }
-  &__img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 43px;
-    height: 43px;
+.social {
+  &__link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 10%;
     background-color: $light;
-    border-radius: 20%;
+    transition: $tr;
+    &:hover {
+      background-color: $accent;
+      &:after {
+        background-color: $light;
+      }
+    }
+    &:after {
+      display: block;
+      content: "";
+      background-color: $accent;
+      mask: center center / 100% no-repeat;
+      -webkit-mask: center center / 100% no-repeat;
+      transition: $tr;
+    }
+    &._wa {
+      &:after {
+        width: 28.125px;
+        height: 28.125px;
+        mask-image: url("../images/social/whatsapp.svg");
+        -webkit-mask-image: url("../images/social/whatsapp.svg");
+      }
+    }
+    &._vk {
+      &:after {
+        width: 31.25px;
+        height: 18.75px;
+        mask-image: url("../images/social/vk.svg");
+        -webkit-mask-image: url("../images/social/vk.svg");
+      }
+
+    }
+    &._tg {
+      &:after {
+        width: 25px;
+        height: 21.875px;
+        mask-image: url("../images/social/telegram.svg");
+        -webkit-mask-image: url("../images/social/telegram.svg");
+      }
+
+    }
   }
 }
+
+
+
+
+//.footer {
+//  margin-bottom: 165px;
+//  padding: 30px 50px;
+//  display: flex;
+//  justify-content: space-between;
+//  align-items: center;
+//  background: $dark;
+//  border-radius: 20px;
+//  &__logo {
+//    margin-bottom: 30px;
+//  }
+//  &__text {
+//    font-weight: 400;
+//    font-size: 16px;
+//    line-height: 150%;
+//    color: $light;
+//  }
+//  &__btn {
+//    font-weight: 700;
+//    font-size: 16px;
+//    line-height: 150%;
+//    text-decoration-line: underline;
+//    color: $accent;
+//  }
+//  &__sign {
+//    font-weight: 400;
+//    font-size: 16px;
+//    line-height: 150%;
+//    color: $light;
+//  }
+//  &__social {
+//    margin-bottom: 20px;
+//    display: flex;
+//    gap: 8px;
+//    justify-content: flex-end;
+//  }
+//  &__img {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//    width: 43px;
+//    height: 43px;
+//    background-color: $light;
+//    border-radius: 20%;
+//  }
+//}
