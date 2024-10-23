@@ -796,9 +796,44 @@ a {
 //  }
 //}
 
-.social {
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 10px 20px;
+  padding: 30px 50px;
+  background: $dark;
+  margin-bottom: 30px;
+  border-radius: $br-min;
+  &__text {
+    margin: 0;
+    & + & {
+      margin-top: 6px;
+    }
+  }
   &__link {
-    display: block;
+    color: $accent;
+    box-shadow: 0 4px 0 -3px $accent;
+    transition: $tr;
+    &:hover {
+      box-shadow: 0 4px 0 -3px transparent;
+    }
+
+  }
+&__copy {
+  text-align: right;
+  align-self: end;
+}
+}
+
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8.13px;
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 10%;
@@ -845,6 +880,7 @@ a {
 
     }
   }
+
 }
 
 
