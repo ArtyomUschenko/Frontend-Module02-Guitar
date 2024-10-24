@@ -189,23 +189,25 @@ a {
     & + & {
       margin-top: 19px;
     }
-
-    &:hover
-    {
-      &:before {
-        width: 100%;
-        opacity: 1;
-        transform: scale(1);
-      }
-      //background-color: $accent;
-      //border-color: $accent;
-      .banner__decor {
-        background-color: $accent;
-        border-color: $accent;
-        &:after {
+    @media (hover: hover) {
+      &:hover {
+        &:before {
+          width: 100%;
           opacity: 1;
           transform: scale(1);
-      }
+        }
+
+        //background-color: $accent;
+        //border-color: $accent;
+        .banner__decor {
+          background-color: $accent;
+          border-color: $accent;
+
+          &:after {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
       }
     }
     &:before {
@@ -369,9 +371,11 @@ a {
       left: -40px;
       top: calc(50% - 8px)
     }
-    &:hover {
-      border: 0;
-      cursor: pointer;
+    @media (hover: hover) {
+      &:hover {
+        border: 0;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -419,9 +423,11 @@ a {
     position: inherit;
     transition: $tr;
     background-color: transparent;
-    &:hover {
-      background: $accent;
-      border: 1px solid $accent;
+    @media (hover: hover) {
+      &:hover {
+        background: $accent;
+        border: 1px solid $accent;
+      }
     }
     &:after {
       display: block;
@@ -453,13 +459,17 @@ a {
     overflow: hidden;
     height: 707px;
     transition: $tr;
-    &:hover {
-      border-color: $accent;
-      .slider-teacher__name {
-        opacity: 1;
-      }
-      .slider-teacher__table {
-        opacity: 1;
+    @media (hover: hover) {
+      &:hover {
+        border-color: $accent;
+
+        .slider-teacher__name {
+          opacity: 1;
+        }
+
+        .slider-teacher__table {
+          opacity: 1;
+        }
       }
     }
   }
@@ -702,15 +712,19 @@ a {
       transform: scale(0);
       left: 769px;
     }
-    &:hover {
-      border-radius: 10px;
-      background-color: $accent;
-      &:after {
-        transform: rotate(45deg);
-      }
-      &:before {
-        opacity: 1;
-        transform: scale(1);
+    @media (hover: hover) {
+      &:hover {
+        border-radius: 10px;
+        background-color: $accent;
+
+        &:after {
+          transform: rotate(45deg);
+        }
+
+        &:before {
+          opacity: 1;
+          transform: scale(1);
+        }
       }
     }
     &:after {
@@ -860,10 +874,13 @@ a {
     border-radius: 10%;
     background-color: $light;
     transition: $tr;
-    &:hover {
-      background-color: $accent;
-      &:after {
-        background-color: $light;
+    @media (hover: hover) {
+      &:hover {
+        background-color: $accent;
+
+        &:after {
+          background-color: $light;
+        }
       }
     }
     &:after {
