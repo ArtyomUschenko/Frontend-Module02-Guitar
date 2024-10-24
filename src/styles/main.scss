@@ -52,6 +52,9 @@ a {
     padding: 17px 45px 0 45px;
     background-color: $accent;
     position: relative;
+    @media (max-width: $r_desk) {
+      padding: 17px 20px 0 20px;
+    }
     &:after {
       content: "";
       display: block;
@@ -77,13 +80,14 @@ a {
     }
 
   }
-  &__link {
-    background-color: $accent;
-    color: $light;
-    font-size: 20px;
-    padding: 20px 45px 0 45px;
-    border-radius: 0 10px 0 0;
+  &__info {
+    padding: 17px 45px 0 45px;
     position: relative;
+    border-radius: 0 10px 0 0;
+    background-color: $accent;
+    @media (max-width: $r_desk) {
+      padding: 17px 20px 0 20px;
+    }
     &:after {
       content: "";
       display: block;
@@ -107,6 +111,19 @@ a {
       //background-size: contain;
     }
   }
+  &__link {
+    color: $light;
+    font-size: 20px;
+    border-bottom: 1px solid $light;
+    padding-bottom: 5px;
+    transition: $tr;
+    @media (hover: hover) {
+      &:hover {
+        border-bottom: 1px solid $accent;
+      }
+    }
+
+  }
 }
 
 .logo {
@@ -129,9 +146,13 @@ a {
   width: 100%;
   max-width: 1830px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 45px;
+  padding-right: 45px;
   box-sizing: border-box;
+  @media (max-width: $r_desk) {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
 }
 
 .banner {
