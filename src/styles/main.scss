@@ -33,18 +33,23 @@ a {
   width: 100%;
   top: 0;
   z-index: 999;
+  @media (max-width: $r_tab) {
+    height: 66px;
+  }
   &:before {
     content: "";
-    width: 90%; //
-    left: 10px; //
+    width: 100%; //
+    //left: 10px; //
     height: 27.5px;
     display: block;
     position: absolute;
     top: 0;
-    //left: 0;
+    left: 0;
     z-index: -1;
     background-color: $accent;
-
+    @media (max-width: $r_tab) {
+      top: -3px;
+    }
   }
 
   &__logo {
@@ -65,6 +70,12 @@ a {
       position: absolute;
       right: -76px;
       top: 0;
+      @media (max-width: $r_tab) {
+        height: 66px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: -66px;
+      }
     }
     &:before {
       content: "";
@@ -88,6 +99,9 @@ a {
     @media (max-width: $r_desk) {
       padding: 17px 20px 0 20px;
     }
+    @media (max-width: $r_tab) {
+      padding: 20px 20px 0 20px;
+    }
     &:after {
       content: "";
       display: block;
@@ -97,6 +111,12 @@ a {
       background-image: url("../images/header-right.svg");
       left: -76px;
       top: 0;
+      @media (max-width: $r_tab) {
+        height: 66px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: -60px;
+      }
     }
     &:before {
       content: "";
@@ -122,6 +142,9 @@ a {
         border-bottom: 1px solid $accent;
       }
     }
+    @media (max-width: $r_tab) {
+      font-size: 16px;
+    }
 
   }
 }
@@ -131,6 +154,9 @@ a {
     svg {
       width: 400px;
       height: 31px;
+      @media (max-width: $r_desk) {
+        width: clamp(300px, 39vw,400px);
+      }
     }
   }
   &._min {
@@ -162,6 +188,10 @@ a {
   padding: 100px 50px;
   margin-top: 135px;
   gap: 50px;
+  @media (max-width: $r_desk_full) {
+    flex-direction: column;
+    padding: 80px 40px;
+  }
   &__main {
     flex-basis: 61%;
     display: flex;
@@ -170,6 +200,11 @@ a {
   }
   &__info {
     flex-basis: calc(39% - 50px);
+    @media (max-width: $r_desk_full) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
   }
   &__item {
     display: flex;
@@ -186,8 +221,21 @@ a {
     box-sizing: border-box;
     transition: $tr;
     z-index: 1;
+    @media (max-width: $r_desk_full) {
+      padding: 30px 0 30px 30px;
+    }
+    @media (max-width: ($r_desk - 24px)) {
+      justify-content: center;
+      padding: 25px 30px 25px 100px;
+      margin-right: 0;
+      border-right: 1px solid $light;;
+      border-radius: $br-min;
+    }
     & + & {
       margin-top: 19px;
+      @media (max-width: $r_desk_full) {
+        margin-top: 0;
+      }
     }
     @media (hover: hover) {
       &:hover {
@@ -226,7 +274,6 @@ a {
       transform: scale(0);
       transform-origin: top right;
       transition: $tr;
-
     }
 
   }
@@ -255,6 +302,11 @@ a {
     border-radius: 10px;
     box-sizing: border-box;
     transition: $tr;
+    @media (max-width: ($r_desk - 24px)) {
+      top: calc(50% - 25px);
+      right: inherit;
+      left: 30px;
+    }
     &:after {
       display: block;
       opacity: 0;
@@ -282,6 +334,9 @@ a {
       right: 0;
       position: absolute;
       top: -1.8px;
+      @media (max-width: ($r_desk - 24px)) {
+        display: none;
+      }
     }
   }
   &__title {
@@ -290,6 +345,9 @@ a {
     margin-top: 0;
     margin-bottom: 20px;
     line-height: 110%;
+    @media (max-width: $r_desk_full) {
+      font-size: clamp(50px, 4vw + 1rem, 64px);
+    }
 
   }
   &__btn {
@@ -311,6 +369,9 @@ a {
         background-color: transparent;
       }
     }
+    @media (max-width: $r_desk_full) {
+      margin-top: 50px;
+    }
   }
 }
 .banner-box {
@@ -318,6 +379,13 @@ a {
   border-radius: $br-min;
   position: relative;
   padding: 30px 332px 30px 30px;
+  @media (max-width: $r_desk_full_over) {
+    padding-right: clamp(200px, 20vw, 332px);
+
+  }
+  @media (max-width: $r_desk_full) {
+    padding-right: 332px;
+  }
   &__title {
     font-size: 24px;
     font-weight: 400;
@@ -332,12 +400,25 @@ a {
     line-height: 150%;
     margin-top: 0;
     margin-bottom: 0;
+    @media (max-width: $r_desk_full) {
+      max-width: 572px;
+    }
   }
   &__img {
     position: absolute;
     &._electroguitar {
       top:-68px;
       right: -20px;
+      @media (max-width: $r_desk_full_over) {
+        width: clamp(200px, 22vw, 332px);
+        top: inherit;
+        bottom: -68px;
+      }
+      @media (max-width: $r_desk_full) {
+        width: auto;
+        top:-68px;
+        bottom: inherit;
+      }
     }
   }
 }
