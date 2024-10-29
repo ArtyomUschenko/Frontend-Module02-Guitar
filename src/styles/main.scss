@@ -585,8 +585,12 @@ a {
     height: min(707px, 36vw);
     transition: $tr;
     box-sizing: border-box;
+    z-index: 2;
     @media (max-width: $r_desk_full) {
       height: min(672px, 47vw);
+    }
+    @media (max-width: $r_tab) {
+      border: 1px solid $accent;
     }
     @media (hover: hover) {
       &:hover {
@@ -612,7 +616,7 @@ a {
   }
   &__img {
     max-width: 100%;
-    height: min(637px, 32vww);
+    height: min(637px, 32vw);
     position: absolute;
     bottom: 0;
     object-fit: cover;
@@ -635,6 +639,25 @@ a {
     @media (max-width: $r_desk_full) {
       text-align: center;
       left: 0;
+    }
+    &._decktop {
+    @media (max-width: $r_tab) {
+      display: none;
+    }
+  }
+    &._mobile {
+      display: none;
+      opacity: 1;
+      position: inherit;
+      left: inherit;
+      bottom: inherit;
+      font-size: 12px;
+      margin-top: 8px;
+      @media (max-width: $r_tab) {
+        display: block; }
+      &:before {
+        display: none;
+      }
     }
     &:before {
       content: "";
