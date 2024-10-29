@@ -192,6 +192,9 @@ a {
     flex-direction: column;
     padding: 80px 40px;
   }
+  @media (max-width: (r_desk - 24px)) {
+    padding: 50px 30px;
+  }
   &__main {
     flex-basis: 61%;
     display: flex;
@@ -226,10 +229,11 @@ a {
     }
     @media (max-width: ($r_desk - 24px)) {
       justify-content: center;
-      padding: 25px 30px 25px 100px;
+      padding: 24px 10px 24px 100px;
       margin-right: 0;
       border-right: 1px solid $light;;
       border-radius: $br-min;
+      height: inherit;
     }
     & + & {
       margin-top: 19px;
@@ -281,11 +285,18 @@ a {
     font-weight: 200; //
     font-size: 24px;//
     margin: 0; //
+    @media (max-width: ($r_desk - 24px)) {
+      font-size: 18px;
+    }
     span {
       display: block; //
       margin-top: 20px;
       font-weight: 700; //
       font-size: 32px; //
+      @media (max-width: ($r_desk - 24px)) {
+        margin-top: 12px;
+        font-size: 20px;
+      }
     }
     }
 
@@ -430,9 +441,19 @@ a {
   //overflow: hidden;
   margin-top: 150px;
   margin-bottom: 150px;
-  &:hover {
+  @media (max-width: ($r_desk)) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: ($r_tab)) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  @media (hover: hover) {
+    &:hover {
     animation-play-state: paused;
   }
+}
   &__text {
     box-sizing: border-box;
     border: 1px solid $grey;
@@ -474,8 +495,22 @@ a {
   display: flex;
   gap: 70px;
   margin-bottom: 150px;
+  @media (max-width: $r_desk_full) {
+    flex-direction: column;
+  }
+  @media (max-width: ($r_desk)) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: ($r_tab)) {
+    margin-bottom: 80px;
+  }
   &__title {
     flex-basis: 395px;
+    @media (max-width: $r_desk_full) {
+      flex-basis: auto;
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__control {
     margin-top: 40px;
@@ -538,8 +573,9 @@ a {
     position: relative;
     border-radius: $br-max;
     overflow: hidden;
-    height: 707px;
+    height: min(707px, 36vw);
     transition: $tr;
+    box-sizing: border-box;
     @media (hover: hover) {
       &:hover {
         border-color: $accent;
@@ -564,7 +600,7 @@ a {
   }
   &__img {
     max-width: 100%;
-    height: 637px;
+    height: min(637px, 32vww);
     position: absolute;
     bottom: 0;
     object-fit: cover;
@@ -573,7 +609,7 @@ a {
   &__name {
     width: 100%;
     opacity: 0;
-    font-size: 24px;
+    font-size: clamp(16px, 2vw - 0.75rem, 24px);
     font-weight: 400;
     margin: 0;
     position: absolute;
@@ -696,6 +732,15 @@ a {
 
 .result {
   margin-top: 150px;
+  margin-bottom: 150px;
+  @media (max-width: ($r_desk)) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: ($r_tab)) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
   &__list {
     margin-top: 50px;
     display: grid;
@@ -768,6 +813,14 @@ a {
 .areas {
   margin-top: 150px;
   margin-bottom: 150px;
+  @media (max-width: ($r_desk)) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  @media (max-width: ($r_tab)) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
   &__link {
     display: flex;
     justify-content: space-between;
