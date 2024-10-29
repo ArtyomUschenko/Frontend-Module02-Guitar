@@ -21,6 +21,7 @@ a {
   text-transform: uppercase;
   color: $grey;
   margin: 0;
+  line-height: 110%;
 }
 
 
@@ -497,6 +498,7 @@ a {
   margin-bottom: 150px;
   @media (max-width: $r_desk_full) {
     flex-direction: column;
+    gap: 30px;
   }
   @media (max-width: ($r_desk)) {
     margin-bottom: 100px;
@@ -513,11 +515,18 @@ a {
     }
   }
   &__control {
-    margin-top: 40px;
+    margin-top: 50px;
+    @media (max-width: $r_desk_full) {
+      margin-top: 0;
+    }
   }
   &__content {
     flex-basis: calc(100% - 395px - 70px);
     width: calc(100% - 395px - 70px);
+    @media (max-width: $r_desk_full) {
+      flex-basis: auto;
+      width: 100%;
+    }
   }
 }
 
@@ -576,6 +585,9 @@ a {
     height: min(707px, 36vw);
     transition: $tr;
     box-sizing: border-box;
+    @media (max-width: $r_desk_full) {
+      height: min(672px, 47vw);
+    }
     @media (hover: hover) {
       &:hover {
         border-color: $accent;
@@ -604,6 +616,9 @@ a {
     position: absolute;
     bottom: 0;
     object-fit: cover;
+    @media (max-width: $r_desk_full) {
+      height: min(615px, 43vw);
+    }
 
   }
   &__name {
@@ -617,6 +632,10 @@ a {
     bottom: 30px;
     transition: $tr;
     z-index: 1;
+    @media (max-width: $r_desk_full) {
+      text-align: center;
+      left: 0;
+    }
     &:before {
       content: "";
       display: block;
@@ -628,6 +647,9 @@ a {
       left: -30px;
       bottom: -30px;
       z-index: -1;
+      @media (max-width: $r_desk_full) {
+        left: 0;
+      }
     }
   }
 }
@@ -706,12 +728,26 @@ a {
   margin: 0 auto; */
   width:  min(1920px, 100%);
   margin-inline: auto;
+  @media (max-width: ($r_desk)) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media (max-width: ($r_tab)) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   &__list {
     margin-top: 50px;
     //display: flex;
     gap: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    @media (max-width: $r_desk_full) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: ($r_tab)) {
+      gap: 20px;
+    }
   }
   &__item {
     //width: 25%; //
