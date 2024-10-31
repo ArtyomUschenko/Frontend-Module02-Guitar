@@ -597,6 +597,9 @@ a {
   @media (max-width: ($r_tab)) {
     gap: 16px;
   }
+  @media (max-width: ($r_mobile_600)) {
+    gap: 10px;
+  }
   &__prev, &__next {
     display: flex;
     align-items: center;
