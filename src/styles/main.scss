@@ -850,8 +850,11 @@ a {
     @media (max-width: $r_desk_full) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (max-width: ($r_tab)) {
+    @media (max-width: $r_tab) {
       gap: 20px;
+    }
+    @media (max-width: $r_mobile_600 ) {
+      grid-template-columns: 1fr;
     }
   }
   &__item {
@@ -868,6 +871,15 @@ a {
     font-size: 16px;
     line-height: 150%;
     margin-bottom: 0;
+    @media (max-width: $r_mobile_600 ) {
+      font-size: 12px;
+    }
+  }
+  &__icon {
+    @media (max-width: $r_mobile_600 ) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
