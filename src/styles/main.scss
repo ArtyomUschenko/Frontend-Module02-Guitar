@@ -22,6 +22,9 @@ a {
   color: $grey;
   margin: 0;
   line-height: 110%;
+  @media (max-width: $r_mobile_600) {
+    font-size: 18px;
+  }
 }
 
 
@@ -215,6 +218,10 @@ a {
   }
   @media (max-width: (r_desk - 24px)) {
     padding: 50px 30px;
+  }
+  @media (max-width: (r_tab - 20px)) {
+    margin-top: 88px;
+    margin-bottom: 70px;
   }
   &__main {
     flex-basis: 61%;
@@ -501,6 +508,9 @@ a {
     animation-play-state: paused;
   }
 }
+  @media (max-width: ($r-tab - 20px)) {
+    display: none;
+  }
   &__text {
     box-sizing: border-box;
     border: 1px solid $grey;
@@ -559,6 +569,9 @@ a {
       display: flex;
       justify-content: space-between;
     }
+    @media (max-width: $r_mobile_600) {
+      align-items: center;
+    }
   }
   &__control {
     margin-top: 50px;
@@ -581,6 +594,9 @@ a {
   align-items: center;
   //height: 70px;
   gap: 20px;
+  @media (max-width: ($r_tab)) {
+    gap: 16px;
+  }
   &__prev, &__next {
     display: flex;
     align-items: center;
@@ -594,6 +610,15 @@ a {
     position: inherit;
     transition: $tr;
     background-color: transparent;
+    @media (max-width: ($r_tab)) {
+      width: 50px;
+      height: 50px;
+      margin-top: 0;
+    }
+    @media (max-width: $r_mobile_600) {
+      width: 40px;
+      height: 40px;
+    }
     @media (hover: hover) {
       &:hover {
         background: $accent;
@@ -607,6 +632,14 @@ a {
       content: "";
       background-repeat: no-repeat;
       background-size: contain;
+      @media (max-width: ($r_tab)) {
+        width: 32px;
+        height: 16px;
+      }
+      @media (max-width: $r_mobile_600) {
+        width: 25px;
+        height: 12px;
+      }
     }
   }
   &__prev {
