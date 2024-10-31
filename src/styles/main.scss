@@ -209,6 +209,9 @@ a {
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
+    @media (max-width: ($r_tab - 20px)) {
+      grid-template-columns: 1ft;
+    }
   }
   &__item {
     display: flex;
@@ -360,7 +363,9 @@ a {
     @media (max-width: $r_desk_full) {
       font-size: clamp(50px, 4vw + 1rem, 64px);
     }
-
+    @media (max-width: $r_tab) {
+      font-size: 40px;
+    }
   }
   &__btn {
     width: 100%;
@@ -398,6 +403,12 @@ a {
   @media (max-width: $r_desk_full) {
     padding-right: 332px;
   }
+  @media (max-width: $r_tab) {
+    padding-right: clamp(150px, 33vw, 250px);
+  }
+  @media (max-width: ($r_tab - 20px)) {
+    padding: 15px;
+  }
   &__title {
     font-size: 24px;
     font-weight: 400;
@@ -405,6 +416,10 @@ a {
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 30px;
+    text-wrap: nowrap;
+    @media (max-width: $r_tab) {
+      font-size: clamp(18px, 1.5vw + 0.8rem, 24px);
+    }
   }
   &__text {
     font-size: 20px;
@@ -415,9 +430,15 @@ a {
     @media (max-width: $r_desk_full) {
       max-width: 572px;
     }
+    @media (max-width: $r_tab) {
+      font-size: clamp(14px, 1.5vw + 0.8rem, 20px);
+    }
   }
   &__img {
     position: absolute;
+    @media (max-width: ($r_tab - 20px)) {
+      display: none;
+    }
     &._electroguitar {
       top:-68px;
       right: -20px;
@@ -431,6 +452,11 @@ a {
         top:-68px;
         bottom: inherit;
       }
+      @media (max-width: $r_tab) {
+        width: clamp(150px, 33vw, 252px);
+        top: -10px;
+      }
+
     }
   }
 }
